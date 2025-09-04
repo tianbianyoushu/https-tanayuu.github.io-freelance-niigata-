@@ -56,9 +56,12 @@
         "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", Arial, sans-serif;
       line-height: 1.6;
       color: var(--text);
+      /* 背景画像レイヤー（最下層） + グラデ + 半透明オーバーレイ */
       background:
+        linear-gradient(0deg, rgba(255,255,255,0.72), rgba(255,255,255,0.72)),
         radial-gradient(900px 420px at 50% -10%, #eaf5ff, transparent 60%),
-        linear-gradient(180deg, var(--bg), #ffffff 65%);
+        linear-gradient(180deg, var(--bg), #ffffff 65%),
+        url('assets/bg.jpg') center/cover fixed no-repeat;
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
     }
