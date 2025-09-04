@@ -8,7 +8,7 @@
   <!-- SEO -->
   <meta name="description" content="新潟からフリーランスへ。ゼロから始めて、自由に働く力を実践的に身につける講座。" />
   <link rel="canonical" href="https://example.com/" />
-  <meta name="theme-color" content="#4CAF50" />
+  <meta name="theme-color" content="#3aa0ff" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="ゼロからのフリーランス講座 in 新潟" />
@@ -27,25 +27,25 @@
   <link rel="icon" href="/favicon.ico" />
   <style>
     :root {
-      --bg: #f9f9f9;
-      --text: #1a1a1a;
-      --muted: #555;
-      --brand: #4CAF50;
-      --brand-600: #43a047;
-      --brand-700: #2e7d32;
+      --bg: #f8fbff; /* 明るい水色がかった背景 */
+      --text: #0f172a; /* 濃いめ紺寄りのテキスト */
+      --muted: #556b84; /*  mutedテキスト */
+      --brand: #3aa0ff; /* 基調の水色 */
+      --brand-600: #218bf5;
+      --brand-700: #0b79d0;
       --card: #ffffff;
-      --border: #e6e6e6;
+      --border: #dbeafe; /* 薄い水色の枠線 */
     }
     @media (prefers-color-scheme: dark) {
       :root {
-        --bg: #0f1115;
-        --text: #f0f3f7;
-        --muted: #a3a9b3;
-        --brand: #6bd87a;
-        --brand-600: #57c869;
-        --brand-700: #3ea853;
-        --card: #151923;
-        --border: #2a3040;
+        --bg: #0b1220;
+        --text: #e6edf7;
+        --muted: #93a4bd;
+        --brand: #5ab3ff;
+        --brand-600: #4aa6ff;
+        --brand-700: #308fe6;
+        --card: #101826;
+        --border: #1e2a3d;
       }
     }
     * { box-sizing: border-box; }
@@ -56,7 +56,9 @@
         "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", Arial, sans-serif;
       line-height: 1.6;
       color: var(--text);
-      background: var(--bg);
+      background:
+        radial-gradient(900px 420px at 50% -10%, #eaf5ff, transparent 60%),
+        linear-gradient(180deg, var(--bg), #ffffff 65%);
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
     }
@@ -78,7 +80,7 @@
       padding: 0 1.2rem;
     }
     header.hero {
-      background: linear-gradient(135deg, var(--brand), var(--brand-700));
+      background: linear-gradient(135deg, color-mix(in oklab, var(--brand) 85%, #7cc6ff), var(--brand-700));
       color: #fff;
       min-height: 100vh;
       display: grid;
@@ -141,8 +143,8 @@
     .panel h2 { font-size: clamp(1.6rem, 2.2vw + 1rem, 2.4rem); margin: 0 0 0.6rem; }
     .panel p { margin: 0 auto; color: var(--muted); font-size: clamp(1rem, 0.6rem + 0.8vw, 1.1rem); max-width: 46rem; }
     .panel.visual {
-      background: radial-gradient(1200px 600px at 50% 120%, color-mix(in oklab, var(--brand) 60%, transparent), transparent 60%),
-                  linear-gradient(180deg, var(--bg), color-mix(in oklab, var(--brand) 8%, var(--bg)) 60%);
+      background: radial-gradient(1200px 600px at 50% 120%, color-mix(in oklab, var(--brand) 45%, transparent), transparent 60%),
+                  linear-gradient(180deg, var(--bg), color-mix(in oklab, var(--brand) 10%, #ffffff) 60%);
     }
 
     /* Scrollytelling sticky visual */
